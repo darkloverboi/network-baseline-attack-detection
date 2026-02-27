@@ -65,6 +65,7 @@ The Network Baseline Attack Detection System is a Python-based cybersecurity too
            ▼
     [ Alert Generator ]
     (Console + Log File)
+    
 Phase 1 – Baseline Collection: During an initial observation window (default: 60 seconds), the system captures packets and builds a statistical profile of normal traffic — average packets per second, bytes per second, SYN/ACK ratios, etc.
 Phase 2 – Live Detection: Post-baseline, incoming packets are compared against the profile in real time. Any metric exceeding the configured standard deviation threshold triggers an alert.
 Phase 3 – Pattern Matching: In parallel, packets are inspected for known attack signatures (e.g., a flood of SYN packets with no ACK, repetitive ICMP echo requests, ARP replies with no prior request).
@@ -156,8 +157,12 @@ Example Output
     → Timestamp: 2026-02-27 14:33:09
 
 📸 Screenshots
+<img width="1920" height="1020" alt="Screenshot 2026-02-27 214705" src="https://github.com/user-attachments/assets/2c8ded0b-35c9-4648-8379-f57d2e6f456e" />
+<img width="1920" height="1020" alt="Screenshot 2026-02-27 214751" src="https://github.com/user-attachments/assets/df910d75-52e2-4405-ab9e-13d762561a01" />
+<img width="1920" height="1020" alt="Screenshot 2026-02-27 214807" src="https://github.com/user-attachments/assets/0025d221-e006-40ec-ac54-0b7e8cceb4b2" />
+<img width="1920" height="1020" alt="Screenshot 2026-02-27 214832" src="https://github.com/user-attachments/assets/290d9649-66e9-415c-b820-39633ec4b922" />
 
-(Add your screenshots in the screenshots/ folder and they'll appear here)
+<img width="1920" height="1020" alt="Screenshot 2026-02-27 214835" src="https://github.com/user-attachments/assets/edc873f4-227a-4329-9d07-a3d7ea969601" />
 
 DashboardAlert LogBaseline StatsShow ImageShow ImageShow Image
 
