@@ -43,28 +43,6 @@ The Network Baseline Attack Detection System is a Python-based cybersecurity too
 ⚙️ Configurable Thresholds — Easily tune detection sensitivity through a config file
 
 
-⚙️ How It Works
-[ Network Interface / PCAP File ]
-           │
-           ▼
-   [ Packet Capture Engine ]   ← Scapy / PyShark
-           │
-           ▼
-   [ Traffic Parser & Classifier ]
-           │
-      ┌────┴────┐
-      ▼         ▼
- [Baseline   [Attack Pattern
-  Profiler]   Matcher]
-      │         │
-      └────┬────┘
-           ▼
-    [ Anomaly Detector ]
-    (Z-score / Threshold)
-           │
-           ▼
-    [ Alert Generator ]
-    (Console + Log File)
     
 Phase 1 – Baseline Collection: During an initial observation window (default: 60 seconds), the system captures packets and builds a statistical profile of normal traffic — average packets per second, bytes per second, SYN/ACK ratios, etc.
 Phase 2 – Live Detection: Post-baseline, incoming packets are compared against the profile in real time. Any metric exceeding the configured standard deviation threshold triggers an alert.
@@ -73,28 +51,6 @@ Phase 3 – Pattern Matching: In parallel, packets are inspected for known attac
 🎯 Attack Types Detected
 AttackDetection MethodSYN Flood (DoS)High SYN/ACK ratio + packet rate anomalyICMP Flood (Ping Flood)ICMP packet rate exceeds baseline thresholdUDP FloodSudden spike in UDP traffic volumePort ScanSingle source hitting multiple destination portsARP Spoofing / PoisoningUnsolicited ARP replies or MAC changesDNS AmplificationUnusually large DNS response sizesBrute Force (SSH/FTP)Repeated TCP connection attempts to port 22/21Traffic Volume AnomalyGeneral statistical deviation from baseline
 
-📁 Project Structure
-network-baseline-attack-detection/
-│
-├── main.py                   # Entry point — starts capture and detection
-├── config.py                 # Configuration: interface, thresholds, timeouts
-├── requirements.txt          # Python dependencies
-│
-├── core/
-│   ├── capture.py            # Packet capture using Scapy
-│   ├── parser.py             # Packet parsing and feature extraction
-│   ├── baseline.py           # Baseline profiling and statistics
-│   ├── detector.py           # Anomaly detection and attack matching
-│   └── alerter.py            # Alert formatting and logging
-│
-├── utils/
-│   ├── logger.py             # Logging utilities
-│   └── helpers.py            # IP/MAC utility functions
-│
-├── logs/                     # Generated alert and traffic logs
-├── pcap_samples/             # Sample PCAP files for testing
-├── screenshots/              # UI and output screenshots
-└── README.md
 
 🚀 Installation
 Prerequisites
@@ -163,8 +119,6 @@ Example Output
 <img width="1920" height="1020" alt="Screenshot 2026-02-27 214832" src="https://github.com/user-attachments/assets/290d9649-66e9-415c-b820-39633ec4b922" />
 
 <img width="1920" height="1020" alt="Screenshot 2026-02-27 214835" src="https://github.com/user-attachments/assets/edc873f4-227a-4329-9d07-a3d7ea969601" />
-
-DashboardAlert LogBaseline StatsShow ImageShow ImageShow Image
 
 🛠️ Tech Stack
 ComponentTechnologyLanguagePython 3Packet CaptureScapyStatistical AnalysisPython statistics moduleCLI Interfaceargparse + coloramaLoggingPython logging modulePCAP AnalysisPyShark / Scapy rdpcapOS SupportLinux, Windows (with Npcap)
