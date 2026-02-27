@@ -1,7 +1,8 @@
 # 🛡️ Network Baseline Attack Detection System
 
 <p align="center">
-  <img src="screenshots/dashboard.png" alt="Dashboard Preview" width="800"/>
+<img width="1920" height="1020" alt="Screenshot 2026-02-27 214705" src="https://github.com/user-attachments/assets/f4cb60f3-33a6-42ca-8dbc-05f13c45bbf6" />
+
 </p>
 
 <p align="center">
@@ -218,13 +219,13 @@ python3 main.py --help
 
 ## 📸 Screenshots
 
-> *(Add your screenshots in the `screenshots/` folder and they'll appear here)*
-
 | Dashboard | Alert Log | Baseline Stats |
-|---|---|---|
-| ![Dashboard](screenshots/dashboard.png) | ![Alerts](screenshots/alerts.png) | ![Baseline](screenshots/baseline.png) |
+<img width="1920" height="1020" alt="Screenshot 2026-02-27 214751" src="https://github.com/user-attachments/assets/062bdbf3-1e94-40c8-8a4c-7f6b446f695b" />
 
----
+<img width="1920" height="1020" alt="Screenshot 2026-02-27 214807" src="https://github.com/user-attachments/assets/9beaafc9-40a7-4a9e-9de1-3ba545b702ef" />
+
+---<img width="1920" height="1020" alt="Screenshot 2026-02-27 214835" src="https://github.com/user-attachments/assets/34260e3b-25b5-462d-81fb-248173abf723" />
+
 
 ## 🛠️ Tech Stack
 
@@ -268,7 +269,7 @@ This project is licensed under the **MIT License** — see the [LICENSE](LICENSE
 
 **Shebin K Babu** — aka **DarkLoverBoi**
 
-Built with ❤️ and Claude AI
+Built with ❤️ 
 
 ---
 
